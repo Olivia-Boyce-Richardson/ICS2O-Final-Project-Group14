@@ -1,0 +1,45 @@
+<mxfile host="65bd71144e">
+    <diagram id="mZ8JdCqG4PnddUPOw9tO" name="Page-1">
+        <mxGraphModel dx="767" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="90" width="660" height="480" as="geometry">
+                        <mxRectangle x="40" y="90" width="50" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;GAME OVER&lt;br&gt;CLICK TO PLAY AGAIN&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=36;" vertex="1" parent="6">
+                    <mxGeometry x="191.5" y="80" width="335" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=24;" vertex="1" parent="6">
+                    <mxGeometry x="344" y="390" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Bus" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;rotation=90;" vertex="1" parent="6">
+                    <mxGeometry x="57.5" y="350" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Bus" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;rotation=90;" vertex="1" parent="6">
+                    <mxGeometry x="500" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Bus" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;rotation=90;" vertex="1" parent="6">
+                    <mxGeometry x="299" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Total buses dodged :&lt;br&gt;16&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="6">
+                    <mxGeometry x="234" y="190" width="250" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=none;dashed=1;html=1;exitX=0.359;exitY=1.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="370" y="340" as="sourcePoint"/>
+                        <mxPoint x="280" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=none;dashed=1;html=1;entryX=0.697;entryY=0;entryDx=0;entryDy=0;exitX=0.697;exitY=1.005;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="6" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="370" y="340" as="sourcePoint"/>
+                        <mxPoint x="420" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
