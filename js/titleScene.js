@@ -4,19 +4,25 @@
 //
 // Created by: Olivia B-R
 // Created on: April 2023
-// This is the splash scene
+// This is the Title Scene
 
 /**
  * This class is the Splash Scene.
  */
-class SplashScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
     /**
      * This method is the constructor for the Splash Scene.
      */
     constructor() {
-        super({ key: "splashScene" })
+        super({ key: "titleScene" })
     
-        this.splashSceneBackgroundImage = null
+        this.titleSceneBackgroundImage = null
+        this.titleSceneText = null
+        this.titleSceneTextStyle = { 
+        font: "200px Times",
+        fill: "#fde4b9",
+        align: "center", 
+        }
     }
     
     /**
@@ -34,8 +40,8 @@ class SplashScene extends Phaser.Scene {
      * Use it to load assets.
      */
     preload() {
-        console.log("Splash Scene")
-        this.load.image("treesSSB", "./assets/treesSSB.png")
+        console.log("Title Scene")
+        this.load.image("treesSSB", "./assets/treesSSB.jpg")
     }
     
     /**
@@ -44,13 +50,15 @@ class SplashScene extends Phaser.Scene {
      * @param {object} data - Any data passed via ScenePlugin.add(). or ScenePlugin.start().
      */
     create(data) {
-        this.splashSceneBackgroundImage = this.add.sprite(
-        0,
-        0,
-        "splashSceneBackground"
-        )
-        this.splashSceneBackgroundImage.x = 1920 / 2
-        this.splashSceneBackgroundImage.y = 1080 / 2
+        this.titleSceneBackgroundImage = this.add
+        .sprite(0, 0, "titleSceneBackground")
+        .setScale(2.75)
+        this.titleSceneBackgroundImage.x = 1920 / 2
+        this.titleSceneBackgroundImage.y = 1080 / 2
+    
+        this.TitleSceneText = this.add
+        .text(1920 / 2, (1080 / 2) + 350, "Space Aliens", this.titleSceneTextStyle)
+        .setOrigin(0.5)
     }
     
     /**
@@ -60,11 +68,11 @@ class SplashScene extends Phaser.Scene {
      * @param {number} delta - The delta time in ms since the last frame.
      */
     update(time, delta) {
-        if (time > 3000) {
-        this.scene.switch("titleScene")
+        if (time > 5000) {
+        this.scene.switch("menuScene")
         }
     }
     }
     
-    export default SplashScene
+    export default TitleScene
     

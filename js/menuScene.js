@@ -3,20 +3,21 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Olivia B-R
-// Created on: April 2023
-// This is the splash scene
+// Created on: May 2023
+// This is the Menu scene
 
 /**
- * This class is the Splash Scene.
+ * This class is the Menu Scene.
  */
-class SplashScene extends Phaser.Scene {
+class MenuScene extends Phaser.Scene {
     /**
-     * This method is the constructor for the Splash Scene.
+     * This method is the constructor.
      */
     constructor() {
-        super({ key: "splashScene" })
+        super({ key: "menuScene" })
     
-        this.splashSceneBackgroundImage = null
+        this.menuSceneBackgroundImage = null
+        this.startButton = null
     }
     
     /**
@@ -34,8 +35,9 @@ class SplashScene extends Phaser.Scene {
      * Use it to load assets.
      */
     preload() {
-        console.log("Splash Scene")
-        this.load.image("treesSSB", "./assets/treesSSB.png")
+        console.log("Menu Scene")
+        this.load.image("menuSceneBackground", "./assets/aliens_screen_image2.jpg")
+        this.load.image("startButton", "./assets/start.png")
     }
     
     /**
@@ -44,13 +46,13 @@ class SplashScene extends Phaser.Scene {
      * @param {object} data - Any data passed via ScenePlugin.add(). or ScenePlugin.start().
      */
     create(data) {
-        this.splashSceneBackgroundImage = this.add.sprite(
-        0,
-        0,
-        "splashSceneBackground"
-        )
-        this.splashSceneBackgroundImage.x = 1920 / 2
-        this.splashSceneBackgroundImage.y = 1080 / 2
+        this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
+        this.menuSceneBackgroundImage.x = 1920 / 2
+        this.menuSceneBackgroundImage.y = 1080 / 2
+    
+        this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
+        this.startButton.setInteractive({ useHandCursor: true })
+        this.startButton.on("pointerdown", () => this.clickButton())
     }
     
     /**
@@ -60,11 +62,13 @@ class SplashScene extends Phaser.Scene {
      * @param {number} delta - The delta time in ms since the last frame.
      */
     update(time, delta) {
-        if (time > 3000) {
-        this.scene.switch("titleScene")
-        }
+      //pass
+    }
+    
+    clickButton() {
+        this.scene.start("gameScene")
     }
     }
     
-    export default SplashScene
+    export default MenuScene
     
