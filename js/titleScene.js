@@ -31,9 +31,8 @@ class TitleScene extends Phaser.Scene {
      */
     preload() {
       console.log("Title Scene")
-      this.load.image("titleSceneBackground", "./assets/treesSSB.png")
+      this.load.image("titleSceneBackground", "./assets/caronroad.jpg")
     }
-  
     /**
      * Can be defined on your own scenes.
      * Use it to create game objects.
@@ -47,7 +46,7 @@ class TitleScene extends Phaser.Scene {
       this.titleSceneBackgroundImage.y = 1080 / 2
   
       this.TitleSceneText = this.add
-      .text(1920 / 2, (1080 / 2) + 350, "Space Aliens", this.titleSceneTextStyle)
+      .text(1920 / 2, (1080 / 2) + 350, "Subway Runner", this.titleSceneTextStyle)
       .setOrigin(0.5)
     }
   

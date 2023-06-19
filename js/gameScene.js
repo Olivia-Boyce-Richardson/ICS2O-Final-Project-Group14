@@ -10,28 +10,6 @@ class GameScene extends Phaser.Scene {
       alienXLocation = 500
     }
 
-    createAlien() {
-      let alienXLocation = Math.floor(Math.random() * 3) + 1 // this will get a number between 1 and 3
-      if (alienXLocation === 1) {
-        alienXLocation = 100
-      } else if (alienXLocation === 2) {
-        alienXLocation = 300
-      } else if (alienXLocation === 3) {
-        alienXLocation = 500
-      }
-    }
-
-    createAlien() {
-      let alienXLocation = Math.floor(Math.random() * 3) + 1 // this will get a number between 1 and 3
-      if (alienXLocation === 1) {
-        alienXLocation = 100
-      } else if (alienXLocation === 2) {
-        alienXLocation = 300
-      } else if (alienXLocation === 3) {
-        alienXLocation = 500
-      }
-    }
-
     
     const anAlien = this.physics.add.sprite(alienXLocation, -100, "alien")
     anAlien.body.velocity.y = 200
